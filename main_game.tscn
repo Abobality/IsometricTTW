@@ -10,9 +10,13 @@ position = Vector2(-64, -16)
 
 [node name="Castle" parent="Map" unique_id=72492799 instance=ExtResource("3_dugkq")]
 position = Vector2(96, -56)
+team = 2
+teamColor = Color(7.412136e-06, 0.32740235, 0.88755864, 1)
 
 [node name="Castle2" parent="Map" unique_id=445570399 instance=ExtResource("3_dugkq")]
 position = Vector2(-128, 56)
+team = 1
+teamColor = Color(0.98898596, 0, 0.21118861, 1)
 
 [node name="UI" type="Control" parent="." unique_id=1255703038]
 layout_mode = 3
@@ -20,7 +24,17 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Button" type="Button" parent="UI" unique_id=1953369001]
+layout_mode = 0
+offset_left = 128.0
+offset_top = -192.0
+offset_right = 344.0
+offset_bottom = -152.0
+text = "Spawn Units"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="UI" unique_id=345809426]
 
 [node name="Camera2D" type="Camera2D" parent="UI/CanvasLayer" unique_id=1435177380]
 zoom = Vector2(1.68, 1.68)
+
+[connection signal="pressed" from="UI/Button" to="Map/Castle" method="_on_button_pressed"]

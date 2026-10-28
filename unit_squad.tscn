@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://wucv15dd7u35"]
 
+[ext_resource type="Script" uid="uid://cb5rmdv8iv5nw" path="res://unit_squad.gd" id="1_0mlfe"]
+[ext_resource type="Texture2D" uid="uid://bxoli4l78rasl" path="res://icon.svg" id="1_kosw0"]
+
 [node name="Unit_Squad" type="Node2D" unique_id=511297277]
+script = ExtResource("1_0mlfe")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=520821964]
+scale = Vector2(0.24749257, 0.25151563)
+texture = ExtResource("1_kosw0")

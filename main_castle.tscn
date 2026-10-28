@@ -1,9 +1,18 @@
 [gd_scene format=3 uid="uid://cdyjcswiojmuw"]
 
+[ext_resource type="Script" uid="uid://cy05so5cuuhn" path="res://main_castle.gd" id="1_4jkho"]
 [ext_resource type="Texture2D" uid="uid://ce71f4lic3cvc" path="res://building.png" id="1_erjci"]
 
 [node name="Castle" type="Node2D" unique_id=72492799]
+script = ExtResource("1_4jkho")
 
 [node name="Building" type="Sprite2D" parent="." unique_id=1643961560]
 texture_filter = 1
 texture = ExtResource("1_erjci")
+
+[node name="Timer" type="Timer" parent="." unique_id=101172975]
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=625405840]
+position = Vector2(-32, 24)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
