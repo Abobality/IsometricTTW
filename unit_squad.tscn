@@ -11,7 +11,8 @@ scale = Vector2(0.24749257, 0.25151563)
 texture = ExtResource("1_kosw0")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1558077528]
-path_max_distance = 222.0
-avoidance_enabled = true
+path_desired_distance = 10.0
+target_desired_distance = 20.0
+path_max_distance = 1000.0
 radius = 16.0
 debug_enabled = true
