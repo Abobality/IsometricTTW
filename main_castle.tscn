@@ -11,6 +11,7 @@ texture_filter = 1
 texture = ExtResource("1_erjci")
 
 [node name="Timer" type="Timer" parent="." unique_id=101172975]
+one_shot = true
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=625405840]
 position = Vector2(-32, 24)

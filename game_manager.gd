@@ -12,4 +12,4 @@ func getEnemyCastle(my_team_id:int):
 	for id in castles:
 		if id != my_team_id:
 			return castles[id];
-		return null;
+	return null;
