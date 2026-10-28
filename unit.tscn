@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cjk4yam0gvnqb"]
+
+[ext_resource type="Texture2D" uid="uid://bxoli4l78rasl" path="res://icon.svg" id="1_btf8p"]
+
+[node name="Unit" type="Node2D" unique_id=1361027690]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1834738521]
+position = Vector2(-9.536743e-07, 9.536743e-07)
+scale = Vector2(0.12499999, 0.12499999)
+texture = ExtResource("1_btf8p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1464562841]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1436304595]

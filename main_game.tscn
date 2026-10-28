@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b0u7gn3uveyat"]
+
+[ext_resource type="PackedScene" uid="uid://dusphev40rjns" path="res://map.tscn" id="1_ykeeq"]
+[ext_resource type="PackedScene" uid="uid://cdyjcswiojmuw" path="res://main_castle.tscn" id="3_dugkq"]
+
+[node name="MainGame" type="Node2D" unique_id=497824852]
+
+[node name="Map" parent="." unique_id=1670118315 instance=ExtResource("1_ykeeq")]
+position = Vector2(-64, -16)
+
+[node name="Castle" parent="Map" unique_id=72492799 instance=ExtResource("3_dugkq")]
+position = Vector2(96, -56)
+
+[node name="Castle2" parent="Map" unique_id=445570399 instance=ExtResource("3_dugkq")]
+position = Vector2(-128, 56)
+
+[node name="UI" type="Control" parent="." unique_id=1255703038]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI" unique_id=345809426]
+
+[node name="Camera2D" type="Camera2D" parent="UI/CanvasLayer" unique_id=1435177380]
+zoom = Vector2(1.68, 1.68)
