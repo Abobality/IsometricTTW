@@ -30,6 +30,7 @@ func spawnUnitSquad():
 	squad.team = team;
 	get_parent().add_child(squad);
 	squad.global_position = $Marker2D.global_position;
+	is_setup = false;
 	
 func findCastle():
 	enemyCastle = GameManager.getEnemyCastle(team);

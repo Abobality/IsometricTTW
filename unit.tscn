@@ -1,14 +1,35 @@
 [gd_scene format=3 uid="uid://cjk4yam0gvnqb"]
 
-[ext_resource type="Texture2D" uid="uid://bxoli4l78rasl" path="res://icon.svg" id="1_btf8p"]
+[ext_resource type="Script" uid="uid://b4ktl8xdod6pd" path="res://unit_mili.gd" id="1_ctwoc"]
+[ext_resource type="Texture2D" uid="uid://i66rso6rrosm" path="res://a_spearman.png" id="2_ctwoc"]
+
+[sub_resource type="Animation" id="Animation_davkp"]
+resource_name = "move"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5wnup"]
+_data = {
+&"move": SubResource("Animation_davkp")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yx7mw"]
+radius = 24.0
 
 [node name="Unit" type="Node2D" unique_id=1361027690]
+script = ExtResource("1_ctwoc")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1834738521]
-position = Vector2(-9.536743e-07, 9.536743e-07)
-scale = Vector2(0.12499999, 0.12499999)
-texture = ExtResource("1_btf8p")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=23441224]
+libraries/ = SubResource("AnimationLibrary_5wnup")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1464562841]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1436304595]
+shape = SubResource("CircleShape2D_yx7mw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=326323644]
+texture_filter = 1
+texture = ExtResource("2_ctwoc")
+hframes = 8
+vframes = 6
+region_enabled = true
+region_rect = Rect2(0, 0, 200, 152)

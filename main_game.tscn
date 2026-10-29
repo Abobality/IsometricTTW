@@ -38,3 +38,4 @@ text = "Spawn Units"
 zoom = Vector2(1.68, 1.68)
 
 [connection signal="pressed" from="UI/Button" to="Map/Castle" method="_on_button_pressed"]
+[connection signal="pressed" from="UI/Button" to="Map/Castle2" method="_on_button_pressed"]
