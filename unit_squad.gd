@@ -2,10 +2,18 @@ extends Node2D
 
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 
-var speed: float = 60.0;
+var speed: float = 40.0;
 var team: int;
 var teamColor: Color;
 var targetCastle: Node2D;
+var state = STATES.MARCHING;
+var units: Array = [];
+
+enum STATES {
+	IDLE,
+	MARCHING,
+	ATTACK
+	};
 
 func _ready() -> void:
 	$Icon.self_modulate = teamColor;
@@ -13,6 +21,22 @@ func _ready() -> void:
 	
 
 func _physics_process(delta: float) -> void:
+	match state:
+		STATES.IDLE:
+			pass
+		STATES.MARCHING:
+			marching(delta)
+		STATES.ATTACK:
+			attack()
+			
+	if nav_agent.is_navigation_finished():
+		state = STATES.ATTACK;
+	
+	
+func attack():
+	pass;
+	
+func marching(delta: float):
 	if targetCastle == null:
 		return;
 		
